@@ -7,7 +7,6 @@ description = '''A discord bot that is made for spamming, dont use this for evil
 bot = commands.Bot(command_prefix='?', description=description)
 
 
-whitelist = "zachabossaloler#1179"
 @bot.event 
 async def on_ready():
 	print("Bot Online!")
@@ -24,10 +23,13 @@ async def spam(ctx : int, strin : str):
 
 @bot.command(pass_context = True)
 async def dm(ctx, member : discord.Member, time: int ,content: str):
-	time = int(time)
-	
-	for i in range(time):
-		await bot.send_message(member, content)
+    if member.id == "239372371134251008":
+        print("no")
+    else:
+        time = int(time)
+        for i in range(time):
+            await bot.send_message(member, content)
+		
 		
 
 def randstring(length):
