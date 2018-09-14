@@ -1,11 +1,13 @@
 touch log
 mkdir Spammy-Bot
-echo created Spammy-Bot... > log
+chmod +x start.sh || chmod +X start.sh
+pip install discord || pip3 install discord 
 mv spammy.py Spammy-Bot 
-echo moving spammy.py > log
 mv README.md Spammy-Bot 
-echo moving README.md > log
 cd Spammy-Bot 
-echo changing current dir > log
 python3 spammy.py 
+echo created Spammy-Bot... > log
+echo moving spammy.py > log
+echo moving README.md > log
+echo changing current dir > log
 echo bot is running > log
